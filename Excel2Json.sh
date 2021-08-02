@@ -78,7 +78,7 @@ LevelTwo(){
 if [ $# -eq 1 ]
 then
   file=$1
-  LevelOne
+  ResourceDetails
 elif [ $# -eq 2 ] && [ $1 -eq 2 ]
 then
   level=$1
