@@ -5,7 +5,7 @@
 ## support two level convertion
 ## 
 
-LevelOne(){
+ResourceDetails(){
     echo "["
     i=1
     for line in `cat ${file} |sed 's/"//g'|awk -F ','  'BEGIN{OFS=","}{print $1,$2}'`
