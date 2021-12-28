@@ -75,34 +75,10 @@ for ($i = 1; $i -le $rows - 1; $i++)
        
     }
 $Filename = "test.csv"
-    #$myDataField1 | Out-File $Filename -Force
+   $myDataField1 | Out-File $Filename -Force
 
 
-  $results = @()  
-    for ([int]$i = 0; $i -lt $rows; $i++)
-    {
-   
-    $Filename = "test.csv"
-    
-    }
 
-$results += $result
-    
-$results | Out-File $Filename -Force 
-
- while ($i -le $rows) {
-
-if ($line -eq $rows) {
-$file++
-$Filename = "$OutputFilenamePattern$file.csv"
-$InputFilename[$start..($line-1)] | Out-File $Filename -Force
-$start = $line;
-$i = 0
-Write-Host "$Filename"
-}
-$i++;
-$line++
-}
 
 
 
