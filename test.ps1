@@ -4,7 +4,7 @@ $xl = New-Object -COM "Excel.Application"
 $xl.Visible = $true
 
 
-$InputFilename = Get-Content 'D:\Trumpf\data.csv'
+$InputFilename = Get-Content 'D:\data.csv'
 
 
 $wb = $xl.Workbooks.Open("D:\Trumpf\data.csv")
