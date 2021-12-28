@@ -1,0 +1,12 @@
+ARCBeat Date,Device Name,Process Path,Process Name,Local IP Address,Local Port,Foreign Device,Foreign IP Address,Foreign Port,State,Remote ServerName,Remote Application,Remote Application's Wave #,Remote Server's Status from SIM,Remote Server's Lifecycle
+44523,test, ,test,test,54611,test,test,445,Established,test,test,Wave 12,Yes-Added by Ute-Thomas-22-Oct-2021-To be assessed,#N/A
+44526,test,C:\WINDOWS\system32\svchost.exe,test,test,5002,test,test,49289,Established,test,test,Wave 15,Yes-Assessed,active
+44523,test,C:\WINDOWS\system32\svchost.exe,test,test,135,test,test,62414,Established,test,test,Wave 15,Yes-Assessed,active
+44523,test,C:\WINDOWS\system32\svchost.exe,test,test,135,test,test,39277,Established,test,test,Wave 15,Yes-Assessed,active
+44523,test, ,test,test,445,test,test,57640,Established,test,test,Wave 6,Yes-Added by Ute-Thomas-22-Oct-2021-To be assessed,#N/A
+44523,test,C:\WINDOWS\system32\svchost.exe,test,test,135,test,test,59908,Established,test,test,Wave 15,Yes-Assessed,active
+44523,test,C:\WINDOWS\system32\svchost.exe,test,test,135,test,test,11632,Established,test,test,Wave 15,Yes-Assessed,active
+44523,test,C:\WINDOWS\system32\svchost.exe,test,test,135,test,test,37166,Established,test,test,Wave 15,Yes-Assessed,active
+44523,test,C:\WINDOWS\system32\svchost.exe,test,test,135,test,test,55342,Established,test,test,Wave 15,Yes-Assessed,active
+44523,test, ,test,test,5006,test,test,41781,Established,test,test,Wave 15,Yes-Assessed,active
+44523,test, ,test,test,5006,test,test,48477,Established,test,test,Wave 15,Yes-Assessed,active
