@@ -4,15 +4,19 @@ $xl = New-Object -COM "Excel.Application"
 $xl.Visible = $true
 
 
-$InputFilename = Get-Content 'D:\Trumpf\data.csv'
+$InputFilename = Get-Content 'D:\test.csv'
 
 
-$wb = $xl.Workbooks.Open("D:\Trumpf\data.csv")
+$wb = $xl.Workbooks.Open("D:\test.csv")
 $ws = $wb.Sheets.Item(1)
 
 # $rows = $ws.UsedRange.Rows.Count
 $rows = $InputFilename.Length
-$rows
+
+
+$columnCount = $ws.UsedRange.Columns.Count
+
+
 
 $OutputFilenamePattern = "arc_netstat_report_202111_part_"
 
@@ -55,40 +59,42 @@ $my1stColumn14=14
 $my1stColumn15=15
 
 
-for ($i = 1; $i -le $rows; $i++)
-    {
-        $myDataField1.Add($ws.Cells.Item($r + $i, $my1stColumn1).text)
-       $myDataField2.Add($ws.Cells.Item($r + $i, $my1stColumn2).text)
-       $myDataField3.Add($ws.Cells.Item($r + $i, $my1stColumn3).text)
-       $myDataField4.Add($ws.Cells.Item($r + $i, $my1stColumn4).text)
-       $myDataField5.Add($ws.Cells.Item($r + $i, $my1stColumn5).text)
-       $myDataField6.Add($ws.Cells.Item($r + $i, $my1stColumn6).text)
-       $myDataField7.Add($ws.Cells.Item($r + $i, $my1stColumn7).text)
-       $myDataField8.Add($ws.Cells.Item($r + $i, $my1stColumn8).text)
-       $myDataField9.Add($ws.Cells.Item($r + $i, $my1stColumn9).text)
-       $myDataField10.Add($ws.Cells.Item($r + $i, $my1stColumn10).text)
-       $myDataField11.Add($ws.Cells.Item($r + $i, $my1stColumn11).text)
-       $myDataField12.Add($ws.Cells.Item($r + $i, $my1stColumn12).text)
-       $myDataField13.Add($ws.Cells.Item($r + $i, $my1stColumn13).text)
-       $myDataField14.Add($ws.Cells.Item($r + $i, $my1stColumn14).text)
-       $myDataField15.Add($ws.Cells.Item($r + $i, $my1stColumn15).text)
-       
-    }
-    $Filename = "test.csv"
+
+
+
     #$myDataField1 | Out-File $Filename -Force
 
-$ListItemCollection = @() 
-$myDataField16.Add($myDataField1)
-$myDataField16.Add($myDataField2)
-    # for ([int]$i = 0; $i -le $rows; $i++)
-    # {
+# # $ListItemCollection = @() 
+# $myDataField16.Add($myDataField1)
+# $myDataField16.Add($myDataField2)
+# #     for ([int]$i = 0; $i -le $rows; $i++)
+# #     # {
     
- $ListItemCollection += $myDataField16
-    $ListItemCollection | Out-File $Filename -Force
+# $ListItemCollection += $myDataField16
+#     $ListItemCollection | Out-File $Filename -Force
 
-    # }
+#     # }
 
-  
+
+for ([int]$i = 0; $i -le $rows; $i++) {
+    $value = $ws.Cells.Item($row, 2).Text
+    if($value -eq "12.COM"){
+   
+     
+Write-Host "test" $value
+
+#while($value -eq '12.COM'){
+$file++
+$Filename = "$OutputFilenamePattern$file.csv"
+$InputFilename[$start..($line-1)] | Out-File $Filename -Force
+$start = $line;
+Write-Host "$Filename"
+ $line++       
+}
+
+}
+
+ 
 
 $wb.Close()
 $xl.Quit()
